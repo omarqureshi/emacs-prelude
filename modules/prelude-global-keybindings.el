@@ -37,11 +37,6 @@
   :type 'boolean
   :group 'prelude)
 
-(defcustom prelude-disable-arrow-navigation t
-  "Disable arrow navigation"
-  :type 'boolean
-  :group 'prelude)
-
 (when prelude-enable-additional-keybindings
   ;; You know, like Readline.
   (global-set-key (kbd "C-M-h") 'backward-kill-word)
@@ -146,21 +141,6 @@
 
   ;; toggle menu-bar visibility
   (global-set-key (kbd "<f12>") 'menu-bar-mode))
-
-(when prelude-disable-arrow-navigation
-  ;; real Emacs hackers don't use the arrow keys
-  (global-set-key (kbd "<up>") (lambda ()
-                                 (interactive)
-                                 (message "Arrow key navigation is disabled. Use C-p instead.")))
-  (global-set-key (kbd "<down>") (lambda ()
-                                   (interactive)
-                                   (message "Arrow key navigation is disabled. Use C-n instead.")))
-  (global-set-key (kbd "<left>") (lambda ()
-                                   (interactive)
-                                   (message "Arrow key navigation is disabled. Use C-b instead.")))
-  (global-set-key (kbd "<right>") (lambda ()
-                                    (interactive)
-                                    (message "Arrow key navigation is disabled. Use C-f instead."))))
 
 (provide 'prelude-global-keybindings)
 
