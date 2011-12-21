@@ -1,6 +1,0 @@
-[submodule "vendor/php-mode"]
-	path = vendor/php-mode
-	url = https://github.com/ejmr/php-mode
-[submodule "vendor/nxhtml"]
-	path = vendor/nxhtml
-	url = https://github.com/emacsmirror/nxhtml.git
