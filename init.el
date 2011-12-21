@@ -86,9 +86,21 @@ by Prelude.")
 (require 'prelude-ruby)
 (require 'prelude-scheme)
 (require 'prelude-xml)
+(require 'php-mode)
+(require 'textile-mode)
 
 ;; load the personal settings
 (when (file-exists-p prelude-personal-dir)
   (mapc 'load (directory-files prelude-personal-dir nil "^[^#].*el$")))
+
+(add-hook 'php-mode-hook
+          (setq c-basic-offset 2))
+
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+
+(setq js-indent-level 2)
+(setq-default tab-width 2)
+
+(load "~/.emacs.d/vendor/nxhtml/autostart.el")
 
 ;;; init.el ends here
